@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { User, Clock } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import api from "@/lib/api";
 
@@ -62,21 +61,9 @@ export const Teams = () => {
                   <h3 className="font-display font-semibold uppercase tracking-tight text-xl">
                     {lang === "eu" ? team.name_eu : team.name_es}
                   </h3>
-                  <p className="text-white/55 text-sm mt-2 leading-relaxed line-clamp-3">
+                  <p className="text-white/55 text-sm mt-2 leading-relaxed">
                     {lang === "eu" ? team.description_eu : team.description_es}
                   </p>
-                  <div className="mt-4 pt-4 border-t border-white/10 space-y-2 text-sm">
-                    {team.coach && (
-                      <div className="flex items-center gap-2 text-white/70">
-                        <User size={15} className="text-brand-sky" /> {team.coach}
-                      </div>
-                    )}
-                    {team.schedule && (
-                      <div className="flex items-center gap-2 text-white/70">
-                        <Clock size={15} className="text-brand-sky" /> {team.schedule}
-                      </div>
-                    )}
-                  </div>
                 </div>
               </motion.div>
             ))}

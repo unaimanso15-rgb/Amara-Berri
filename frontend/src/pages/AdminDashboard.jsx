@@ -14,7 +14,7 @@ import { CLUB } from "@/lib/club";
 
 const EMPTY_TEAM = {
   name_es: "", name_eu: "", category: "", description_es: "", description_eu: "",
-  coach: "", schedule: "", image_url: "", order: 0,
+  image_url: "", order: 0,
 };
 
 export default function AdminDashboard() {
@@ -157,7 +157,6 @@ export default function AdminDashboard() {
                     <th className="text-left px-5 py-3">Orden</th>
                     <th className="text-left px-5 py-3">Nombre (ES)</th>
                     <th className="text-left px-5 py-3 hidden md:table-cell">Categoría</th>
-                    <th className="text-left px-5 py-3 hidden lg:table-cell">Entrenador/a</th>
                     <th className="text-right px-5 py-3">Acciones</th>
                   </tr>
                 </thead>
@@ -167,7 +166,6 @@ export default function AdminDashboard() {
                       <td className="px-5 py-3 text-white/50">{team.order}</td>
                       <td className="px-5 py-3 font-medium">{team.name_es}</td>
                       <td className="px-5 py-3 hidden md:table-cell"><Badge className="bg-brand-sky/15 text-brand-sky border-0">{team.category}</Badge></td>
-                      <td className="px-5 py-3 hidden lg:table-cell text-white/60">{team.coach || "-"}</td>
                       <td className="px-5 py-3">
                         <div className="flex justify-end gap-2">
                           <button data-testid={`edit-team-${team.id}`} onClick={() => openEdit(team)} className="h-9 w-9 flex items-center justify-center rounded-lg border border-white/10 hover:border-brand-sky hover:text-brand-sky transition-colors"><Pencil size={15} /></button>
@@ -229,8 +227,6 @@ export default function AdminDashboard() {
             <Field label="Nombre (EU)" testid="team-name-eu" value={form.name_eu} onChange={setF("name_eu")} required />
             <Field label="Categoría" testid="team-category" value={form.category} onChange={setF("category")} required />
             <Field label="Orden" testid="team-order" type="number" value={form.order} onChange={setF("order")} />
-            <Field label="Entrenador/a" testid="team-coach" value={form.coach} onChange={setF("coach")} />
-            <Field label="Horario" testid="team-schedule" value={form.schedule} onChange={setF("schedule")} />
             <div className="sm:col-span-2">
               <Label className="text-white/70 text-xs uppercase tracking-wider">URL imagen</Label>
               <Input data-testid="team-image" value={form.image_url} onChange={setF("image_url")} className="mt-2 bg-brand-dark border-white/10 text-white" />

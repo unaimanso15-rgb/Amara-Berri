@@ -11,7 +11,7 @@ export const Hero = () => {
 
   const stats = [
     { value: "250+", label: t.hero.stat1 },
-    { value: "8", label: t.hero.stat2 },
+    { value: "5", label: t.hero.stat2 },
     { value: "40+", label: t.hero.stat3 },
   ];
 
