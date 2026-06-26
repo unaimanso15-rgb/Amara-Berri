@@ -1,0 +1,129 @@
+{
+  "theme": "Dark",
+  "archetype": "Archetype 2: Performance Pro",
+  "reasoning": "A high-contrast, athletic aesthetic fitting a modern sports club. Uses deep navy/indigo as the dark anchor, with electric sky blue and pure white to create visual tension and highlight key interactions. This aligns with 2026 sports UI trends of dark mode dominance, bold typography, and action-oriented layouts.",
+  "colors": {
+    "background": {
+      "default": "#060B14",
+      "surface": "#0C1527",
+      "surface_hover": "#13213D"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "accent": "#38BDF8"
+    },
+    "brand": {
+      "sky_blue": "#38BDF8",
+      "deep_navy": "#0C1527",
+      "white": "#FFFFFF",
+      "accent_hover": "#0284C7"
+    }
+  },
+  "typography": {
+    "headings": {
+      "family": "Clash Display, sans-serif",
+      "weights": ["600", "700"],
+      "styling": "tracking-tight uppercase",
+      "rationale": "High-impact, wide geometric sans that commands attention. Conveys athletic authority."
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weights": ["400", "500", "600"],
+      "styling": "leading-relaxed tracking-normal",
+      "rationale": "Highly legible, modern sans-serif with a slightly technical feel that pairs well with wide display fonts."
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl tracking-tighter uppercase",
+      "h2": "text-3xl md:text-4xl tracking-tight uppercase",
+      "h3": "text-xl md:text-2xl tracking-tight uppercase",
+      "body": "text-base md:text-lg",
+      "labels": "text-sm uppercase tracking-[0.2em]"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing + Bento Grids. Let the high-contrast elements breathe.",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_spacing": "py-24 md:py-32",
+    "grids": {
+      "bento_marketing": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
+      "team_cards": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+    }
+  },
+  "components": {
+    "navbar": {
+      "style": "Glassmorphism",
+      "classes": "sticky top-0 z-50 backdrop-blur-xl bg-[#060B14]/80 border-b border-white/10",
+      "interaction": "Bilingual toggle (EU/ES) prominent on the right next to Contact CTA."
+    },
+    "hero": {
+      "layout": "Full viewport height (min-h-[80vh]), content center-left aligned.",
+      "background": "Dark overlay (bg-black/60) over the action-shot hero image to ensure text pops.",
+      "typography": "Massive H1 in Clash Display with a Sky Blue accent word.",
+      "cta": "Primary button in Sky Blue, Secondary button transparent with white border."
+    },
+    "team_cards": {
+      "style": "Neumorphic/Tactile variant adapted for Dark Theme",
+      "classes": "bg-[#0C1527] rounded-xl border border-white/10 overflow-hidden group hover:border-[#38BDF8]/50 transition-colors",
+      "image_container": "h-48 md:h-64 overflow-hidden relative",
+      "image_behavior": "Image scales up (scale-105) on group hover",
+      "content": "p-6. Title in Clash Display, subtitle/category in Manrope."
+    },
+    "contact_form": {
+      "style": "Technical/Grid Borders",
+      "wrapper": "bg-[#0C1527] p-8 md:p-12 rounded-2xl border border-white/10",
+      "inputs": "bg-[#060B14] border-white/10 text-white focus:border-[#38BDF8] focus:ring-1 focus:ring-[#38BDF8] rounded-lg",
+      "button": "w-full bg-[#38BDF8] hover:bg-[#0284C7] text-[#060B14] font-bold uppercase tracking-wider py-4 rounded-lg transition-transform hover:-translate-y-1"
+    },
+    "admin_dashboard": {
+      "style": "Control Room Grid",
+      "layout": "Dense, highly functional. Sidebar navigation.",
+      "cards": "Flat solid surfaces (#0C1527), 1px subtle border, sharp corners (rounded-md max).",
+      "tables": "Shadcn UI tables customized for dark mode. Sky blue used strictly for primary actions."
+    }
+  },
+  "motion_and_interactions": {
+    "hover_states": "Buttons translate-y-[-2px] with increased shadow. Card borders transition from white/10 to sky-400/50.",
+    "page_transitions": "Fade and slight slide-up (using Framer Motion).",
+    "scrolling": "Smooth momentum scrolling (Lenis) recommended."
+  },
+  "media": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_berri-school/artifacts/1digreeg_image.png",
+      "description": "Amara Berri K.E. Official Shield",
+      "usage": "Navbar, Footer, Admin Header"
+    },
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Soccer ball on field empty stadium",
+      "usage": "Hero section background with dark overlay"
+    },
+    "teams_section": {
+      "url": "https://images.pexels.com/photos/34970425/pexels-photo-34970425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Kids playing soccer dynamically",
+      "usage": "Team categories preview or header for 'Equipos' page"
+    },
+    "about_section": {
+      "url": "https://images.unsplash.com/photo-1594305548608-df04461f1b28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxzYW4lMjBzZWJhc3RpYW4lMjBkb25vc3RpYSUyMGJhc3F1ZXxlbnwwfHx8fDE3ODI0NjYyNjR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "View of San Sebastian / Donostia",
+      "usage": "Quiénes somos (About us) background or inline image to anchor the local identity"
+    },
+    "extra_action": {
+      "url": "https://images.pexels.com/photos/26283685/pexels-photo-26283685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Young kids playing soccer on field",
+      "usage": "Fallback or additional content block"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Must implement a bilingual toggle (Euskera / Castellano). Use a React context or i18n library to manage state across 'Inicio', 'Quiénes somos', 'Equipos/Categorías', and 'Contacto'.",
+    "Apply 'Clash Display' font for all headings. Ensure it is loaded either locally or via a CDN (e.g., Fontshare). Use 'Manrope' (Google Fonts) for body text.",
+    "Install and use Phosphor Icons (yarn add @phosphor-icons/react) for UI icons (sporty, crisp).",
+    "Implement the Contact form securely, configured to send emails via Resend as requested.",
+    "The admin panel must be built using Shadcn UI. Keep it strictly functional: dense data tables, clear primary actions in Sky Blue.",
+    "Add 'data-testid' attributes to all interactive elements (buttons, form inputs, language toggles, nav links) for automated testing. Example: data-testid='nav-about-link'.",
+    "Hero image must have a bg-black/60 overlay to ensure text contrast (APCA standards).",
+    "Do not use generic 'Inter' for headings under any circumstances.",
+    "Use standard raw HTML+Tailwind for public marketing pages (Home, About). Shadcn is reserved for interactive forms and the entire Admin dashboard.",
+    "The project uses .js files (not .tsx). Adjust component syntax and Shadcn implementations accordingly."
+  ]
+}
